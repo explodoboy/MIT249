@@ -1,0 +1,41 @@
+/* This is a pallete overwrite, intended to be used on top of the default [styles.css] file. */
+
+:root {
+
+    /* body */
+    --container: #fff;
+    --body: #3f3f3f;
+    --text: #000;
+    --alt_text: #000;
+
+    /* nav */
+    --address_background: #111;
+    --address_color: #fff;
+
+    /* main content */
+    --section_border: #808080;
+
+    --active_link_text: #60008d;
+    --active_link_hover: #c038ff;
+    --inactive_link_text: #910101;
+
+    --table_hover: rgb(0, 0, 0, 0.75);
+    --figure_background: rgb(0, 0, 0, 0.35);
+
+        /* below values are HSL format */
+    --ranking_0: 0, 0%;
+    --ranking_open: 120, 100%;
+    --ranking_1: 60, 100%;
+    --ranking_2: 36, 100%;
+    --ranking_3: 0, 100%;
+    --ranking_4: 283, 100%;
+    --ranking_5: 217, 77%;
+    
+    --opinion_p3: 281, 100%;
+    --opinion_p2: 127, 100%;
+    --opinion_p1: 205, 100%;
+    --opinion_n0: 0, 0%;
+    --opinion_n1: 50, 100%;
+    --opinion_n2: 25, 100%;
+    --opinion_n3: 0, 100%;
+}

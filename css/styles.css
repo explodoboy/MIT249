@@ -28,12 +28,55 @@
 
 
 /* <| UNIVERSAL_RULES |> */
+
+/* Centralized color pallette, for easy swapping of colors via CSS overwrites. */
+:root {
+
+    /* body */
+    --container: #8c8c8c;
+    --body: #333333;
+    --text: #000;
+    --alt_text: #fff;
+
+    /* nav */
+    --address_background: #111;
+    --address_color: #fff;
+
+    /* main content */
+    --section_border: #808080;
+
+    --active_link_text: hsl(217, 100%, 35%);
+    --active_link_hover: hsl(281, 100%, 70%);
+    --inactive_link_text: hsl(10, 100%, 35%);
+
+    --table_hover: rgb(0, 0, 0, 0.5);
+    --figure_background: rgb(0, 0, 0, 0.25);
+
+        /* below values are HSL format */
+    --ranking_0: 0, 0%;
+    --ranking_open: 120, 100%;
+    --ranking_1: 60, 100%;
+    --ranking_2: 36, 100%;
+    --ranking_3: 0, 100%;
+    --ranking_4: 283, 100%;
+    --ranking_5: 217, 77%;
+    
+    --opinion_p3: 281, 100%;
+    --opinion_p2: 127, 100%;
+    --opinion_p1: 205, 100%;
+    --opinion_n0: 0, 0%;
+    --opinion_n1: 50, 100%;
+    --opinion_n2: 25, 100%;
+    --opinion_n3: 0, 100%;
+}
+
 * {
     box-sizing: border-box;
+    color: var(--text);
 }
 
 body {
-    background-color: #212545;
+    background-color: var(--body);
     font-family: 'Inconsolata', monospace;
     font-weight: 600;
 }
@@ -46,7 +89,7 @@ img {
 /* Content-containing portion of the page, appears when screen width gets too high */
 #container {
     overflow: hidden;
-    background-color: #5966c0;
+    background-color: var(--container);
     padding-left: 1em;
     padding-right: 1em;
 }
@@ -88,8 +131,8 @@ header p {
     margin: 0.5em 0;
     overflow: auto;
     text-align: left;
-    background-color: #111;
-    color: #fff;
+    background-color: var(--address_background);
+    color: var(--address_color);
     padding: 0.25em;
     padding-left: 0.5em;
     border-radius: 8px;
@@ -109,21 +152,21 @@ nav ul {
 
 nav li {
     font-size: 1.5em;
-    border-top: 4px solid #212545;
+    border-top: 4px solid var(--body);
 }
 
 nav li a:hover {
-    background-color: #292f56;
-    color: #e1a0ff;
+    background-color: var(--table_hover);
+    color: var(--active_link_hover);
 }
 
 /*nav li:last-child {
-    border-bottom: 3px solid #212545;
+    border-bottom: 3px solid var(--body);
 }*/
 
 nav li a {
     display: block;
-    color: #000;
+    color: var(--text);
     font-weight: 600;
     padding: 0.5em 1em;
     text-decoration: none;
@@ -133,8 +176,8 @@ nav li a {
 /* [VM_MAIN] */
 main {
     font-size: 1em; /* Not necessary, but explicit definition is easier to understand */
-    border-top: 1px solid #808080;
-    border-bottom: 1px solid #808080;
+    border-top: 1px solid var(--section_border);
+    border-bottom: 1px solid var(--section_border);
 }
 
 main p, main h1, main h2, main h3, main h4 {
@@ -148,7 +191,7 @@ main ul {
 table, th, td {
     font-size: 0.9em;
     margin: 1em auto;
-    border: 3px solid #212545;
+    border: 3px solid var(--body);
     border-collapse: collapse;
     width: auto;
     padding: 0.5em;
@@ -166,11 +209,11 @@ td a {
 
 /* Links should always be in the first column */
 table .active-link:hover {
-    background-color: #292f56;
+    background-color: var(--table_hover);
 }
 
 section {
-    border-top: 1px solid #808080;
+    border-top: 1px solid var(--section_border);
     padding: 1em 0;
 }
 
@@ -190,8 +233,8 @@ figure img {
     width: 95%;
     margin: 0 auto;
     padding: 0.5em;
-    border: 4px solid #212545;
-    background: rgba(33, 37, 69, 0.5);
+    border: 4px solid var(--body);
+    background: var(--figure_background);
 }
 
 .figure-small {
@@ -222,8 +265,8 @@ figcaption {
     padding: 0.25em 0;
     text-align: center;
     font-size: 1.25em;
-    color: #fff;
-    background: rgba(33, 37, 69, 1);
+    color: var(--alt_text);
+    background: var(--body);
 }
 
 
@@ -235,12 +278,11 @@ footer {
 footer p {
     font-size: 0.75em;
     text-align: center;
-    color: #fff;
+    color: var(--alt_text);
     padding: 0 1em;
 }
 
 footer p a {
-    color: #fff;
     text-decoration: none;
 }
 
@@ -265,15 +307,15 @@ footer p a {
 }
 
 .active-link {
-    color: #83b3ff;
+    color: var(--active_link_text);
 }
 
 .active-link:hover {
-    color: #e1a0ff;
+    color: var(--active_link_hover);
 }
 
 .inactive-link {
-    color: #dd7e6b;
+    color: var(--inactive_link_text);
     text-decoration: underline;
 }
 
@@ -304,57 +346,57 @@ footer p a {
 
 /* Government rankings */
 .ranking-0 {
-    color: #fff;
+    color: hsl(var(--ranking_0), 100%);
     padding: 0 3px;
-    background-color: #4d4d4d;
-    border: #1a1a1a solid 1px;
+    background-color: hsl(var(--ranking_0), 30%);
+    border: hsl(var(--ranking_0), 10%) solid 1px;
 }
 
 .ranking-open {
-    color: #00ff00;
+    color: hsl(var(--ranking_open), 50%);
     padding: 0 3px;
-    background-color: #004d00;
-    border: #003300 solid 1px;
+    background-color: hsl(var(--ranking_open), 15%);
+    border: hsl(var(--ranking_open), 10%) solid 1px;
 }
 
 .ranking-1 {
-    color: #ffff00;
+    color: hsl(var(--ranking_1), 50%);
     padding: 0 3px;
-    background-color: #4d4d00;
-    border: #333300 solid 1px;
+    background-color: hsl(var(--ranking_1), 15%);
+    border: hsl(var(--ranking_1), 10%) solid 1px;
 }
 
 .ranking-2 {
-    color: #ff9900;
+    color: hsl(var(--ranking_2), 50%);
     padding: 0 3px;
-    background-color: #4d2e00;
-    border: #331f00 solid 1px;
+    background-color: hsl(var(--ranking_2), 15%);
+    border: hsl(var(--ranking_2), 10%) solid 1px;
 }
 
 .ranking-3 {
-    color: #ff0000;
+    color: hsl(var(--ranking_3), 50%);
     padding: 0 3px;
-    background-color: #4d0000;
-    border: #330000 solid 1px;
+    background-color: hsl(var(--ranking_3), 15%);
+    border: hsl(var(--ranking_3), 10%) solid 1px;
 }
 
 .ranking-4 {
-    color: #b600ff;
+    color: hsl(var(--ranking_4), 50%);
     padding: 0 3px;
-    background-color: #37004d;
-    border: #250033 solid 1px;
+    background-color: hsl(var(--ranking_4), 15%);
+    border: hsl(var(--ranking_4), 10%) solid 1px;
 }
 
 .ranking-5 {
-    color: #4a86e8;
+    color: hsl(var(--ranking_5), 60%);
     padding: 0 3px;
-    background-color: #0a234d;
-    border: #06152d solid 1px;
+    background-color: hsl(var(--ranking_5), 17%);
+    border: hsl(var(--ranking_5), 10%) solid 1px;
 }
 
 /* Override ranking classes border and padding for table stuff */
 table .ranking-0, table .ranking-open, table .ranking-1, table .ranking-2, table .ranking-3, table .ranking-4, table .ranking-5 {
-    border: 3px solid #212545;
+    border: 3px solid var(--body);
     padding: 0.5em;
 }
 
@@ -363,7 +405,7 @@ table .ranking-0, table .ranking-open, table .ranking-1, table .ranking-2, table
     display: block;
     margin: 0 auto;
     padding: 1em 0;
-    border-top: 1px solid #808080;
+    border-top: 1px solid var(--section_border);
 }
 
 #news section {
@@ -371,7 +413,7 @@ table .ranking-0, table .ranking-open, table .ranking-1, table .ranking-2, table
     margin: 0 0;
     padding: 1em;
     border-top: none;
-    border-bottom: 1px solid #808080;
+    border-bottom: 1px solid var(--section_border);
 }
 
 /* Character/nation opinions */
@@ -383,38 +425,38 @@ table .ranking-0, table .ranking-open, table .ranking-1, table .ranking-2, table
 }
 
 .pos3 {
-    background-color: #57007F;
-    border: 4px solid #220033;
+    background-color: hsl(var(--opinion_p3), 25%);
+    border: 4px solid hsl(var(--opinion_p3), 10%);
 }
 
 .pos2 {
-    background-color: #007F0E;
-    border: 4px solid #003305;
+    background-color: hsl(var(--opinion_p2), 25%);
+    border: 4px solid hsl(var(--opinion_p2), 10%);
 }
 
 .pos1 {
-    background-color: #004A7F;
-    border: 4px solid #001D33;
+    background-color: hsl(var(--opinion_p1), 25%);
+    border: 4px solid hsl(var(--opinion_p1), 10%);
 }
 
 .neut {
-    background-color: #3F3F3F;
-    border: 4px solid #191919;
+    background-color: hsl(var(--opinion_n0), 25%);
+    border: 4px solid hsl(var(--opinion_n0), 10%);
 }
 
 .neg1 {
-    background-color: #7F6A00;
-    border: 4px solid #332A00;
+    background-color: hsl(var(--opinion_n1), 25%);
+    border: 4px solid hsl(var(--opinion_n1), 10%);
 }
 
 .neg2 {
-    background-color: #7F3300;
-    border: 4px solid #331400;
+    background-color: hsl(var(--opinion_n2), 25%);
+    border: 4px solid hsl(var(--opinion_n2), 10%);
 }
 
 .neg3 {
-    background-color: #7F0000;
-    border: 4px solid #330000;
+    background-color: hsl(var(--opinion_n3), 25%);
+    border: 4px solid hsl(var(--opinion_n3), 10%);
 }
 
 /* Add a column when screen size is large enough. */
@@ -504,11 +546,11 @@ table .ranking-0, table .ranking-open, table .ranking-1, table .ranking-2, table
         display: inline-block;
         margin-left: -9px;
         border-top: none;
-        border-right: 4px solid #212545;
+        border-right: 4px solid var(--body);
     }
 
     nav li:first-child {
-        border-left: 4px solid #212545;
+        border-left: 4px solid var(--body);
     }
 
     nav li:last-child {
@@ -539,11 +581,11 @@ table .ranking-0, table .ranking-open, table .ranking-1, table .ranking-2, table
     }
 
     #news section {
-        border-left: 1px solid #808080;
+        border-left: 1px solid var(--section_border);
     }
 
     #news section:nth-child(2n) {
-        border-right: 1px solid #808080;
+        border-right: 1px solid var(--section_border);
     }
 
     #news section:nth-last-child(-n+2) {
@@ -561,11 +603,11 @@ table .ranking-0, table .ranking-open, table .ranking-1, table .ranking-2, table
     }
 
     #news section {
-        border-left: 1px solid #808080;
+        border-left: 1px solid var(--section_border);
     }
 
     #news section:nth-child(3n) {
-        border-right: 1px solid #808080;
+        border-right: 1px solid var(--section_border);
     }
 
     #news section:nth-last-child(-n+3) {
