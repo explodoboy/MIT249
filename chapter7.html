@@ -4,18 +4,19 @@
 <!-- This website template was created by: Christopher C. -->
 
 <head>
-    <title>Chapter 7 | jQuery I</title>
+    <title>Chapter 7 | JQuery I</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/grabnok_styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Roboto&display=swap" rel="stylesheet">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="images/grandma.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/grandma.png">
-    <link rel="icon" sizes="192x192" href="images/grandma.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/grabnok.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/grabnok.png">
+    <link rel="icon" sizes="192x192" href="images/grabnok.png">
 </head>
 
 <body>
@@ -24,11 +25,11 @@
 
         <!-- Area for website name/logo. -->
         <header>
-            <p class="text-bold address-bar">Chapter 7 | jQuery I</p>
-            <a href="index.html"><img src="images/grandma.png" alt="Website icon"></a>
-            <h1>EXPLODOBOY'S</h1>
-            <h2>EMPTY PORTAL</h2>
-            <p>"We slumber, for all eternity."<br>-Somebody, at the edge of eternity</p>
+            <p class="text-bold address-bar">Chapter 7 | JQuery I</p>
+            <a href="index.html"><img src="images/grabnok.png" alt="Website icon"></a>
+            <h1>GRABNOK THE DESTROYER OF WORLD'S</h1>
+            <h2>RELATIVISTIC OBLITERATION PORTAL BETA</h2>
+            <p>"No, you see, when I say I'll moon you, I mean <a class="text-italic">literally</a>. Like, throw a moon at you at a large fraction of the speed of light."<br>-Grabnok, current Mall Enthusiast</p>
         </header>
 
         <!-- Area for navigational hyperlinks. -->
@@ -53,8 +54,27 @@
         <!-- Area for main body of website. -->
         <main>
             <section>
-                <p>This page hasn't yet been built. Come by around January 10, surely there'll be something by them.</p>
-                <p class="text-italic align-center">"Personalizing layout..."</p>
+                <p>Thank you for opening this GRABNOK.</p>
+                <h3 id="count" class="unspaced-bottom">uh oh script error</h3>
+
+                <ul>
+                    <li class="ranking-3">Grabnok is coming</li>
+                    <li class="ranking-1">Grabnok is behind you</li>
+                    <li class="ranking-1">Grabnok is homeless</li>
+                    <li class="ranking-1">Grabnok is here</li>
+                    <li class="ranking-1">Grabnok is shopping</li>
+                </ul>
+
+                <p>If you do not want a GRABNOK, click on it and it will be flagged for removal. Click on it again to confirm removal. This cannot be undone.</p>
+
+                <p id="abandoned"></p>
+                
+                <form class="align-center" id="newItemForm">
+                    <label for="itemInput" id="itemName">Input the GRABNOK you want. It must be a GRABNOK to be accepted.</label>
+                    <br>
+                    <input type="text" id="itemInput" name="itemName">
+                </form>
+                <button type="button" form="newItemForm" id="newItemButton" value="grabnok">Want more?</button>
             </section>
         </main>
 
@@ -67,7 +87,8 @@
 
     </div>
 
-    <!--script src="js/index.js"></script-->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/chapter7.js"></script>
 
 </body>
 

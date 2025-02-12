@@ -7,6 +7,7 @@
     <title>Chapter 8 | jQuery II</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/grandhold_styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,10 +26,10 @@
         <!-- Area for website name/logo. -->
         <header>
             <p class="text-bold address-bar">Chapter 8 | jQuery II</p>
-            <a href="index.html"><img src="images/grandma.png" alt="Website icon"></a>
-            <h1>EXPLODOBOY'S</h1>
-            <h2>EMPTY PORTAL</h2>
-            <p>"We slumber, for all eternity."<br>-Somebody, at the edge of eternity</p>
+            <a href="index.html"><img src="images/grandhold.png" alt="Website icon"></a>
+            <h1>GRANDHOLD OF ABYSS</h1>
+            <h2>DOCUMENT ACCESS PORTAL</h2>
+            <p>"Together, we achieve something above greatness. We become grand."<br>-Epoch Abyss, current Grandhold Administrator</p>
         </header>
 
         <!-- Area for navigational hyperlinks. -->
@@ -53,8 +54,33 @@
         <!-- Area for main body of website. -->
         <main>
             <section>
-                <p>This page hasn't yet been built. Come by around January 10, surely there'll be something by them.</p>
-                <p class="text-italic align-center">"I ran out of cool quotes."</p>
+                <p>Welcome to this Grandhold General Information Network (GGIN) information access archive. This node contains several documents maintained by the Grandhold's administration. It is open to all nations regardless of standing with the Grandhold of Abyss.</p>
+                <p>Not all documents are available; many are under access restrictions (also known as classification) which only Grandhold citizens or those given authorization to access by an Administrator may access. Documents you do not have access to are hidden from the table of contents, and direct access attempts will be denied. Some documents may be hidden from unauthorized direct access as well.</p>
+                <p>The extranet relay you are accessing the GGIN node through has extensive restrictions on artificial intelligence access. Currently, documents can only be accessed through strict text input.</p>
+                <form class="align-center">
+                    <input type="text" id="input">
+                </form>
+                <table>
+                    <tr>
+                        <th>Keyword</th>
+                        <th>Document Title</th>
+                    </tr>
+                    <tr>
+                        <th>augment</th>
+                        <td>Mandatory Citizen Augments</td>
+                    </tr>
+                    <tr>
+                        <th>panacea</th>
+                        <td>'Panacea' Emergency Biosculpting-Nanite Pill</td>
+                    </tr>
+                    <tr>
+                        <th>stasis</th>
+                        <td>Temporal Stasis</td>
+                    </tr>
+                </table>
+            </section>
+            <section id="content">
+                <p>Document will be loaded in this section.</p>
             </section>
         </main>
 
@@ -67,7 +93,8 @@
 
     </div>
 
-    <!--script src="js/index.js"></script-->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/chapter8.js"></script>
 
 </body>
 
