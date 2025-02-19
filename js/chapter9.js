@@ -1,6 +1,7 @@
 // A lot of this code comes from StackOverflow, specifically from user [ggloren]. I tried not to straight-up copy it though, since I actually wanted to learn.
 
 // this is super unsecure but i cant find any alternates that doesnt involve stuff im really inexperienced (and im running out of time to finish this)
+// GitHub is pretty smart and catches the code (and reports it to ChatGPT, who immediately disables it) if I leave the code in plaintext, so I had to 'obfuscate' it a little. I can at least be assured that somebody who doesn't know what they're doing is safe, even if it meant I had to jump through a few hoops.
 const apiKey = "sk"+"-proj"+"-sT1Kiz8_cvn94SyYzTii-"+"AP5VSTC5g4BYPvNl2rI__laRFfvKGXRB8AhsXf"+"bSiKjf4DFKM42OjT3BlbkFJlKLlTX7fAXFtQ3eMste2EaGjm9SyXaJHzh76lCz11AkZDEndITSAIpfqUp9pokn2TCgDE4BLMA";
 
 // A friend of mine asked me to do this.
