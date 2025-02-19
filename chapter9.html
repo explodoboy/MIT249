@@ -7,15 +7,16 @@
     <title>Chapter 9 | API I</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/nft.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Roboto&display=swap" rel="stylesheet">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="images/grandma.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/grandma.png">
-    <link rel="icon" sizes="192x192" href="images/grandma.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/nftbro.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/nftbro.png">
+    <link rel="icon" sizes="192x192" href="images/nftbro.png">
 </head>
 
 <body>
@@ -25,10 +26,10 @@
         <!-- Area for website name/logo. -->
         <header>
             <p class="text-bold address-bar">Chapter 9 | API I</p>
-            <a href="index.html"><img src="images/grandma.png" alt="Website icon"></a>
-            <h1>EXPLODOBOY'S</h1>
-            <h2>EMPTY PORTAL</h2>
-            <p>"We slumber, for all eternity."<br>-Somebody, at the edge of eternity</p>
+            <a href="index.html"><img src="images/nftbro.png" alt="Website icon"></a>
+            <h1>HALLIORHODI'S</h1>
+            <h2>NFT PORTAL</h2>
+            <p>"The fall of civilization will enable the ultimate triumph of crypto!"<br>-Halliorhodi, Space NFT-Bro</p>
         </header>
 
         <!-- Area for navigational hyperlinks. -->
@@ -43,7 +44,6 @@
                 <li><a href="chapter7.html">C7</a></li>
                 <li><a href="chapter8.html">C8</a></li>
                 <li><a href="chapter9.html">C9</a></li>
-                <li><a href="chapter10.html">C10</a></li>
                 <li><a href="chapter11.html">C11</a></li>
                 <li><a href="chapter12.html">C12</a></li>
                 <li><a href="chapter13.html">C13</a></li>
@@ -53,14 +53,23 @@
         <!-- Area for main body of website. -->
         <main>
             <section>
-                <p>This page hasn't yet been built. Come by around February 18, surely there'll be something by them.</p>
-                <p class="text-italic align-center">"GGIN connection established. Input your query."</p>
+                <p>Attention, peons:</p>
+                <p class="unspaced-bottom">I, the infinitely wise and brilliant Haliorhodi, am officially sharing with the world my brilliant NFT collection! With the chance for unlimited profit due to the spectulative demand for animal-based compressed images and practically no overhead due to the lack of restraints on my ability to steal images from IrregularArt, I have created a vast assortment of unique and digitially-scarce images! Behold in amazement my great collection and cough up the kramer for my digital assets which will define the future! And no right clicking!</p>
+                <p class="text-bold unspaced-top">-Haliorhodi</p>
 
+                <p id="kramer">Cost per image 'access': 584,800 Kramer [$0.05 USD]</p>
+            </section>
+            <section>
+                <sup class="text-italic">(Image generations takes several seconds, please be patient)</sup>
+                <br><sup class="text-italic">(Page needs to be reloaded between generations)</sup>
                 <form class="align-center">
-                    <input name="input" placeholder="Put query here" required>
-                    <input type="submit" value="Send">
+                    <input id="input" name="input" placeholder="Input NFT here" required>
+                    <input id="send" type="submit" value="Send">
                 </form>
-                <p id="output">test</p>
+                <figure>
+                    <img id="image" src="images/prophet.png">
+                    <figcaption id="caption">THIS WEBSITE WAS PILLAGED BY GOR-GON'GILLA NEWS PIRATES. YOUR GALAXY IS NEXT.</figcaption>
+                </figure>
             </section>
         </main>
 
@@ -74,7 +83,6 @@
     </div>
 
     <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/chapter9_api.js"></script>
     <script src="js/chapter9.js"></script>
 
 </body>
