@@ -1,6 +1,6 @@
 // A lot of this code comes from StackOverflow, specifically from user [ggloren]. I tried not to straight-up copy it though, since I actually wanted to learn.
 
-// this is super unsecure but i cant find any alternates that doesnt involve stuff im really inexperienced with
+// this is super unsecure but i cant find any alternates that doesnt involve stuff im really inexperienced (and im running out of time to finish this)
 const apiKey = "sk"+"-proj"+"-sT1Kiz8_cvn94SyYzTii-"+"AP5VSTC5g4BYPvNl2rI__laRFfvKGXRB8AhsXf"+"bSiKjf4DFKM42OjT3BlbkFJlKLlTX7fAXFtQ3eMste2EaGjm9SyXaJHzh76lCz11AkZDEndITSAIpfqUp9pokn2TCgDE4BLMA";
 
 // A friend of mine asked me to do this.
