@@ -72,7 +72,7 @@ const generatePrompt = async input => {
             messages: [
                 {
                     role: "user",
-                    content: "Generate a Dall-E prompt of a parody NFT character. You must follow the following rules:\n* Reply with ONLY the prompt.\n* The background must be simple.\n* The focus must be a single character.\n\nNow, generate a prompt about: " + input,
+                    content: "Generate a Dall-E prompt of a parody NFT character. You must follow the following rules:\n* Reply with ONLY the prompt.\n* The background must be simple.\n* The focus must be a single character.\n* There should be nothing of note in the background or foreground other than the character.\n\nNow, generate a prompt about: " + input,
                 }
             ],
             model: "gpt-4o-mini",
@@ -102,7 +102,7 @@ const generateTitle = async input => {
             messages: [
                 {
                     role: "user",
-                    content: "Provide a short, NFT-style name for the following (ex: PostApocalypseDonkey#8002):" + input,
+                    content: "Provide a short, NFT-style name for the following (ex: PostApocalypseDonkey#8002) (use math function to generate a number between 1 and 9999) (respond with only the name):" + input,
                 }
             ],
             model: "gpt-4o-mini",
