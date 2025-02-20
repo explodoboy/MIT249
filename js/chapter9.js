@@ -62,6 +62,8 @@ randomKramer();
 
 // To generate images, we need a good prompt. This generates one.
 const generatePrompt = async input => {
+    var result;
+
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST",
         headers: {
@@ -76,7 +78,8 @@ const generatePrompt = async input => {
                 }
             ],
             model: "gpt-4o-mini",
-            temperature: 0,
+            temperature: 0.5,
+            max_completion_tokens:128,
         }),
     });
   
@@ -86,12 +89,17 @@ const generatePrompt = async input => {
         throw Error(data.error.message);
     }
 
+    result = data.choices[0].message.content;
+
     // If nothing explodes, proceed forward.
-    return data.choices[0].message.content;
+    console.log("Image Prompt: " + result);
+    return result;
 };
 
 // The prompt gets reprocessed to make a suiting title for the 'NFT'.
 const generateTitle = async input => {
+    var result;
+    
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST",
         headers: {
@@ -106,7 +114,8 @@ const generateTitle = async input => {
                 }
             ],
             model: "gpt-4o-mini",
-            temperature: 0,
+            temperature: 0.5,
+            max_completion_tokens:24,
         }),
     });
   
@@ -116,12 +125,17 @@ const generateTitle = async input => {
         throw Error(data.error.message);
     }
 
+    result = data.choices[0].message.content;
+
     // If nothing explodes, proceed forward.
-    return data.choices[0].message.content;
+    console.log("Title: " + result);
+    return result;
 };
 
 // Takes in a prompt, and gives back an image.
 const generateImage = async input => {
+    var result;
+
     const response = await fetch("https://api.openai.com/v1/images/generations", {
         method: "POST",
         headers: {
@@ -142,7 +156,10 @@ const generateImage = async input => {
         throw Error(data.error.message);
     }
 
+    result = data.data[0].url;
+
     // If nothing explodes, proceed forward.
+    console.log("Image URL: " + result);
     return data.data[0].url;
 };
 
