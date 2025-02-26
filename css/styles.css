@@ -46,6 +46,7 @@
     --section_border: #808080;
 
     --active_link_text: hsl(217, 100%, 35%);
+    --active_link_text_alt: hsl(217, 100%, 65%);
     --active_link_hover: hsl(281, 100%, 70%);
     --inactive_link_text: hsl(10, 100%, 35%);
 
@@ -267,6 +268,10 @@ figcaption {
     font-size: 1.25em;
     color: var(--alt_text);
     background: var(--body);
+}
+
+figcaption .active-link {
+    color: var(--active_link_text_alt);
 }
 
 

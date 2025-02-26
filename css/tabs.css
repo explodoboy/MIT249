@@ -1,0 +1,41 @@
+/* TABS */
+.tab-list {
+    /* Workaround to get rid of whitespace characters between <li> elements without removing the actual whitespace. */
+    font-size: 0;
+}
+  
+.tab-list li {
+    font-size: 16px;
+    display: inline-block;
+    list-style-type: none;
+    background-color: hsl(273, 100%, 30%);
+    border: 3px solid rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.1em;
+}
+
+.tab-list li a {
+    color: #fff;
+    display: block;
+    padding: 7px 10px 7px 10px;
+    text-decoration: none; /* Removes link underlines. */
+}
+
+
+/* HOVER STATES */
+.tab-list li.tab-active a {
+    background-color: hsl(273, 100%, 50%);
+}
+
+.tab-list li a:hover {
+    background-color: hsl(273, 100%, 70%);
+}
+
+
+/* PANELS */
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.tab-active {
+    display: block;
+}

@@ -16,6 +16,7 @@
     --section_border: #808080;
 
     --active_link_text: rgb(193, 217, 255);
+    --active_link_text_alt: (193, 217, 255);
     --active_link_hover: #eecbff;
     --inactive_link_text: #dd7e6b;
 

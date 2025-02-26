@@ -16,6 +16,7 @@
     --section_border: #808080;
 
     --active_link_text: hsl(217, 100%, 50%);
+    --active_link_text_alt: hsl(217, 100%, 50%);
     --active_link_hover: hsl(281, 100%, 70%);
     --inactive_link_text: hsl(10, 100%, 35%);
 
