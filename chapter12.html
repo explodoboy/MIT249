@@ -55,6 +55,35 @@
                 <p>This page hasn't yet been built. Come by around March 4, surely there'll be something by them.</p>
                 <p class="text-italic align-center">"I've had enough of you. Companion, add him to my audio filter."</p>
             </section>
+            <section>
+                <div class="align-center">
+                    <form id="searchForm">
+                        <input type="text" name="searchInput" id="searchInput">
+                    </form>
+                    <!--form id="filterForm">
+                        <label>Category Filter:</label>
+                        <select name="filter" id="filter" onchange="filter_search_sort()">
+                            <option value="administration">Administration</option>
+                            <option value="archiving">Archiving</option>
+                            <option value="digital">Digital Engineering</option>
+                            <option value="populace">Populace Administration</option>
+                        </select>
+                    </form-->
+                    <form id="orderForm">
+                        <label>Sort Order:</label>
+                        <select name="order" id="order" onchange="filter_search_sort()">
+                            <option value="ascending">Ascending</option>
+                            <option value="descending">Descending</option>
+                        </select>
+                    </form>
+                </div>
+                <table id="output">
+                    <tr>
+                        <th>Uh oh!</th>
+                        <th>Something went wrong. You might need to enable Javascript.</th>
+                    </tr>
+                </table>
+            </section>
         </main>
 
         <!-- Area for bottom/footer of website. -->
@@ -66,7 +95,8 @@
 
     </div>
 
-    <!--script src="js/index.js"></script-->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/chapter12.js"></script>
 
 </body>
 
