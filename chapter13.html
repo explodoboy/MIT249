@@ -27,7 +27,7 @@
             <p class="text-bold address-bar">Chapter 13 | Form</p>
             <a href="index.html"><img src="images/grandma.png" alt="Website icon"></a>
             <h1>EXPLODOBOY'S</h1>
-            <h2>EMPTY PORTAL</h2>
+            <h2>FEEDBACK PORTAL</h2>
             <p>"We slumber, for all eternity."<br>-Somebody, at the edge of eternity</p>
         </header>
 
@@ -52,8 +52,27 @@
         <!-- Area for main body of website. -->
         <main>
             <section>
-                <p>This page hasn't yet been built. Come by around March 11, surely there'll be something by them.</p>
-                <p class="text-italic align-center">"Knock knock. It's the tax man. With stacks of forms. With taxes. Tax forms."</p>
+                <p>Thank you for using my website! If you have feedback, feel free to leave something below. If you want me to get back to you, please leave your email.</p>
+                <p class="text-italic">disclaimer: does not actually send anything to me</p>
+            </section>
+            <section>
+                <form>
+                    <div class="align-center" id="name_container">
+                        <label for="name">Please provide your email.<br>(This is optional)</label>
+                        <br>
+                        <input type="text" id="name">
+                    </div>
+                    <br>
+                    <div class="align-center" id="feedback_container">
+                        <label for="feedback">Provide feedback below.<br>(Max 1000 characters)</label>
+                        <br>
+                        <textarea class="required" id="feedback" rows="5" cols="50"></textarea>
+                    </div>
+                    <br>
+                    <div class="align-center" id="submit_container">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
             </section>
         </main>
 
@@ -66,7 +85,8 @@
 
     </div>
 
-    <!--script src="js/index.js"></script-->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/chapter13.js"></script>
 
 </body>
 
