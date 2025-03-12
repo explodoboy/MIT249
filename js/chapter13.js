@@ -13,14 +13,13 @@ $("form").submit(function(e) {
     // First, validate for minimum length.
     for (var i = 0; i < children.length - 1; i++) {
         var thisChild = children[i];
+        removeErrorMessage(thisChild);
 
         // First validate minimum length.
         validCheck = validateRequired(thisChild);
         if (!validCheck[0]) {
             showErrorMessage(thisChild, validCheck[1]);
             validationFailed = true;
-        } else if (!validationFailed) {
-            removeErrorMessage(thisChild);
         }
 
         // Now validate for max length.
@@ -28,8 +27,13 @@ $("form").submit(function(e) {
         if (!validCheck[0]) {
             showErrorMessage(thisChild, validCheck[1]);
             validationFailed = true;
-        } else if (!validationFailed) {
-            removeErrorMessage(thisChild);
+        }
+
+        // Now validate for max length.
+        validCheck = validateEmail(thisChild);
+        if (!validCheck[0]) {
+            showErrorMessage(thisChild, validCheck[1]);
+            validationFailed = true;
         }
     }
     if (validationFailed) {
@@ -51,7 +55,6 @@ function validateRequired(element) {
      */
 
     if (elementClass === "required") {
-        console.log(elementLength);
         if (elementLength < 1) {
             return [false, "Field is required."]
         } else {
@@ -65,7 +68,7 @@ function validateRequired(element) {
 // Variables are declared outside of validateMaxLength() since they're expected to be called more than once.
 // While it probably means little, a little optimisation can't hurt...right?
 // ...I miss C# already.
-var maxLengthName = 100;
+var maxLengthName = 150;
 var maxLengthFeedback = 1000;
 function validateMaxLength(element) {
     var elementID = element.id;
@@ -79,13 +82,13 @@ function validateMaxLength(element) {
      */
 
     // When isValid is true, the error message is empty, because it will never be read.
-    if (elementID === "name") {
+    if (elementID === "email") {
         if (elementLength < maxLengthName)
         {
             return [true, ""];
         } else {
             var overLength = maxLengthName - elementLength;
-            return [false, "Your name is " + -overLength + " characters too long."];
+            return [false, "Your email is " + -overLength + " characters too long."];
         }
     }
     else if (elementID === "feedback") {
@@ -102,13 +105,36 @@ function validateMaxLength(element) {
     }
 }
 
+// Checks to see if an element has the 'required' element. If so, it forces the user to input a minimum amount to submit.
+function validateEmail(element) {
+    var elementID = element.id;
+    var elementLength = element.value.length;
+
+    /* An array is returned, using the following format:
+     * 
+     * [isValid, invalidReason]
+     * 
+     * isValid is assumed to be a bool. invalidReason is the error message.
+     */
+    if (elementID === "email" && elementLength > 0) {
+        if (/[^@]+@[^@]+/.test(element.value))
+        {
+            return [true, ""];
+        } else {
+            return [false, "Input is invalid. It must be an email."];
+        }
+    } else {
+        return [true, ""];
+    }
+}
+
 function showErrorMessage(element, errorMessage) {
     var errorContainer = $(element).siblings('.error.message');
 
     if (!errorContainer.length) {
-       errorContainer = $('<br><span class="error message text-italic"></span>').insertAfter(element);
+       errorContainer = $('<span class="error message text-italic"></span>').insertAfter(element);
     }
-    errorContainer.text(errorMessage);
+    errorContainer.html("<br>" + errorMessage);
 }
 
 function removeErrorMessage(element) {
